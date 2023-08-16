@@ -18,10 +18,10 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: "*",
-    methods: ["GET","PUT","POST","DELETE"],
+    methods: ["GET", "PUT", "POST", "DELETE"],
     credentials: true,
   })
-)
+);
 
 // Using routes
 app.use("/api/v1/users", userRouter);
