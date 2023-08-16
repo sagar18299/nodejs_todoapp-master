@@ -15,7 +15,12 @@ config({
 // Using Middlewares
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+    credentials: true,
+  })
+);
 
 // Using routes
 app.use("/api/v1/users", userRouter);
