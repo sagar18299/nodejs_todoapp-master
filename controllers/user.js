@@ -23,6 +23,8 @@ export const login = async (req, res, next) => {
 };
 
 export const register = async (req, res) => {
+  console.log("hit successfully")
+  debugger;
   try {
     const { name, email, password } = req.body;
 
