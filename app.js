@@ -28,7 +28,8 @@ app.use(function(req, res, next) {
   next();
 });
 app.use(cors({
-  origin: 'https://react-todo-app-master-p1ay-j8pj3wfxa-sagar18299.vercel.app',
+  origin: '*',
+  methods: ["GET", "PUT", "POST", "DELETE"],
   credentials: true
 }));
 
