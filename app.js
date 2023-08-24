@@ -22,13 +22,18 @@ app.use(cookieParser());
 //     credentials: true,
 //   })
 // );
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+// app.use(function(req, res, next) {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//   next();
+// });
+// app.use(cors({
+//   origin: '*',
+//   methods: ["GET", "PUT", "POST", "DELETE"],
+//   credentials: true
+// }));
 app.use(cors({
-  origin: '*',
+  origin: '*', // Replace with your frontend's actual URL in production
   methods: ["GET", "PUT", "POST", "DELETE"],
   credentials: true
 }));
@@ -44,3 +49,4 @@ app.get("/", (req, res) => {
 
 // Using Error Middleware
 app.use(errorMiddleware);
+
