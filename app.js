@@ -8,7 +8,7 @@ import cors from "cors";
 import path from "path";
 
 export const app = express();
-app.use(express.static(path.resolve(__dirname, 'dist')));
+app.use(express.static( 'dist'));
 
 config({
   path: "./data/config.env",
