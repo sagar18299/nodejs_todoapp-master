@@ -5,8 +5,10 @@ import { config } from "dotenv";
 import cookieParser from "cookie-parser";
 import { errorMiddleware } from "./middlewares/error.js";
 import cors from "cors";
+const path = require('path');
 
 export const app = express();
+server.use(express.static(path.resolve(__dirname, 'dist')));
 
 config({
   path: "./data/config.env",
